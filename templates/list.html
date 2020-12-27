@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row align-items-center justify-content-center">
+        <h1>{% block title %} List of books {% endblock %}</h1>
+    </div>
+    <br>
+
+{% if books %}
+    <table>
+        <thead>
+            <tr>
+                <th>book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Published date</th>
+                <th>Operation</th>
+                <th>QRcode</th>
+            </tr>
+        </thead> 
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book['id'] }}</td>
+                <td>{{ book['name'] }}</td>
+                <td>{{ book['author'] }}</td>
+                <td>{{ book['published'] }}</td>
+                <!-- #TODO: create edit and delete 
+                -->
+                <td>edit || delete</td>
+                <!-- #TODO: qrcode with link  
+                https://medium.com/better-programming/how-to-generate-and-decode-qr-codes-in-python-a933bce56fd0
+                -->
+                <td><a href="get/{{ book['id'] }}">QRCode image</a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+  <h1>Nessun libro presente</h1>
+{% endif %}
+
+{% endblock %}
