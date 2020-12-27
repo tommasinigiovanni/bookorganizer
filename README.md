@@ -90,6 +90,12 @@ heroku config --app bookorganizer
     4. and in `Deployment method` section
     here select GitHub and connect your github repo.
 
+- Deploy th app in HEROKU
+    1. Enter in HEROKU daskboard
+    2. click on you app
+    3. go in `Deploy` tab
+    4. click on `Deploy Branch`
+
 - run the migration for the creation of DB in HEROKU
 ```bash
 heroku run python manage.py db upgrade --app bookorganizer
