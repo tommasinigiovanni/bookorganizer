@@ -101,7 +101,7 @@ heroku config --app bookorganizer
 heroku run python manage.py db upgrade --app bookorganizer
 ```
 
-Your app is now ready in Heroku, mine is **here**: [https://bookoranizer.herokuapp.com/](https://bookoranizer.herokuapp.com/)
+Your app is now ready in Heroku, mine is **here**: [https://bookorganizer.herokuapp.com/](https://bookorganizer.herokuapp.com/)
 
 
 # LINKOGRAPHY
